@@ -8,17 +8,15 @@ import { Header } from './components/Header.jsx';
 
 function App() {
   return (
-    <>
-    <Header />
-      <Router>
-        <Routes >
-          <Route path='/' element={<Home />}/>
-          <Route path='/about' element={<About />}/>
-          <Route path='*' element={<Page404 />} />
-        </Routes>
-      </Router>
-    </>
-  )
+    <Router>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='*' element={<Page404 />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
