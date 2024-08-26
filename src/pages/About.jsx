@@ -1,6 +1,6 @@
 export const About = () => {
   return (
-    <main>
+    <main className="animate__animated animate__fadeIn animate__faster">
       <div className="container">
         <h2 className="title-page">Sobre Doguito</h2>
       </div>

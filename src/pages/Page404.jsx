@@ -3,7 +3,7 @@ import '../assets/css/404.css';
 
 export const Page404 = () => {
     return (
-        <main className='container flex flex--center flex--column'>
+        <main className='container flex flex--center flex--column animate__animated animate__fadeIn animate__faster'>
             <img className='dog-image' src={image} alt="Doguito" />
             <p className='notfound-text'>Esta página no existe</p>
         </main>
