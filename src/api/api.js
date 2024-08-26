@@ -6,6 +6,5 @@ export const api = axios.create({
 
 export const search = async ( url, setData ) => {
     const { data } = await api.get(url)
-
     setData( data )
 }

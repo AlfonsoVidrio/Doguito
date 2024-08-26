@@ -3,19 +3,20 @@ import { search } from "../api/api.js";
 import { Link } from "react-router-dom";
 import '../assets/css/blog.css';
 
-export const ListCategories = () => {
+// eslint-disable-next-line react/prop-types
+export const ListCategories = ({ url }) => {
 
     const [ categories, setCategories ] = useState([]);
 
     useEffect(() => {
-        search(`/categorias`, setCategories)
-    }, [])
+        search(`/categories`, setCategories)
+    }, [url])
 
     return (
         <ul className='category-list container flex'>
             {
                 categories.map( category => (
-                    <Link to={`/categoria/${category.id}`} key={category.id}>
+                    <Link to={`/category/${category.id}`} key={category.id}>
                         <li className={`category-list__category category-list__category--${category.id}`}>    
                             {category.name}
                         </li>
